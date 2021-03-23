@@ -41,7 +41,6 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
       const findProductIndex = products.findIndex(item => item.id === productId);
       
       if (stock.data.amount <= products[findProductIndex].amount) {
-        console.log(stock.data.amount, products[findProductIndex].amount);
         toast.error('Quantidade solicitada fora de estoque');
 
         return;
